@@ -1,0 +1,98 @@
+{
+  "name": "Claude文档问答测试集",
+  "description": "用于测试RAG系统准确性的标准问答对",
+  "version": "1.1",
+  "test_cases": [
+    {
+      "id": "qa_001",
+      "category": "model_info",
+      "question": "Claude 4.5 包含哪几个模型？",
+      "expected_answer": "Claude 4.5 包含三个模型：Opus 4.5、Sonnet 4.5 和 Haiku 4.5",
+      "expected_keywords": ["Opus 4.5", "Sonnet 4.5", "Haiku 4.5"],
+      "retrieval_keywords": ["Opus 4.5", "Sonnet 4.5", "Haiku 4.5"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_002",
+      "category": "pricing",
+      "question": "Claude Sonnet 4.5 的输入输出定价分别是多少？",
+      "expected_answer": "Claude Sonnet 4.5 的定价为：输入每百万令牌 $3，输出每百万令牌 $15",
+      "expected_keywords": ["$3", "$15", "输入", "输出"],
+      "retrieval_keywords": ["$3", "$15", "Sonnet 4.5"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_003",
+      "category": "api_usage",
+      "question": "如何在命令行中设置 Anthropic API 密钥？",
+      "expected_answer": "使用命令：export ANTHROPIC_API_KEY='your-api-key-here'",
+      "expected_keywords": ["export", "ANTHROPIC_API_KEY"],
+      "retrieval_keywords": ["ANTHROPIC_API_KEY", "export"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_004",
+      "category": "features",
+      "question": "Claude Opus 4.5 的努力参数有哪些选项？",
+      "expected_answer": "努力参数有三个选项：高努力（high）、中等努力（medium）、低努力（low）",
+      "expected_keywords": ["high", "medium", "low"],
+      "retrieval_keywords": ["努力", "effort", "high", "medium", "low"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_005",
+      "category": "technical_specs",
+      "question": "Claude 支持的上下文窗口大小是多少 tokens？",
+      "expected_answer": "Claude 标准上下文窗口为 200K tokens",
+      "expected_keywords": ["200K", "tokens"],
+      "retrieval_keywords": ["上下文窗口", "200K", "context window"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_006",
+      "category": "installation",
+      "question": "如何安装 Anthropic Python SDK？",
+      "expected_answer": "使用命令：pip install anthropic",
+      "expected_keywords": ["pip install", "anthropic"],
+      "retrieval_keywords": ["pip install", "anthropic"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_007",
+      "category": "features",
+      "question": "什么是扩展思考功能？",
+      "expected_answer": "扩展思考允许模型在生成响应前进行深入推理",
+      "expected_keywords": ["扩展思考", "推理"],
+      "retrieval_keywords": ["扩展思考", "extended thinking", "推理"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_008",
+      "category": "model_comparison",
+      "question": "Claude Haiku 4.5 相比 Haiku 3.5 有什么改进？",
+      "expected_answer": "Haiku 4.5 是首个支持扩展思考的 Haiku 模型，具有接近前沿的性能",
+      "expected_keywords": ["扩展思考", "性能", "Haiku 4.5"],
+      "retrieval_keywords": ["Haiku 4.5", "改进", "扩展思考"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_009",
+      "category": "tools",
+      "question": "文本编辑器工具在 Claude 4 中的类型名称是什么？",
+      "expected_answer": "text_editor_20250728",
+      "expected_keywords": ["text_editor_20250728"],
+      "retrieval_keywords": ["text_editor", "工具类型"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_010",
+      "category": "model_info",
+      "question": "Claude Sonnet 4.5 的训练数据截止日期是什么时候？",
+      "expected_answer": "2025 年 4 月",
+      "expected_keywords": ["2025", "训练数据"],
+      "retrieval_keywords": ["训练数据", "截止日期", "Sonnet 4.5"],
+      "difficulty": "medium"
+    }
+  ]
+}
+

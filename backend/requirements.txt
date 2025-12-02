@@ -1,0 +1,48 @@
+# Web框架
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+
+# 数据库
+sqlalchemy>=2.0.25
+aiosqlite>=0.19.0
+
+# LangChain生态
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-openai>=0.0.5
+langchain-anthropic>=0.1.0
+langchain-text-splitters>=0.0.1
+
+# 向量数据库
+chromadb>=0.4.22
+
+# 文档处理
+pypdf>=4.0.0
+python-docx>=1.1.0
+# unstructured  # 可选，不支持Python 3.13
+pytesseract>=0.3.10
+pdf2image>=1.16.0
+chardet>=5.2.0
+
+# 数据验证 (使用最新版支持Python 3.13)
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+
+# 工具
+python-dotenv>=1.0.0
+cryptography>=42.0.0
+aiofiles>=23.2.0
+httpx>=0.26.0
+numpy>=1.24.0
+
+# Embedding (本地模型支持) - 可选
+# sentence-transformers>=2.3.0
+
+# BM25检索支持
+rank-bm25>=0.2.2
+jieba>=0.42.1  # 中文分词
+
+# 测试依赖
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: rag-chat-backend
+    restart: unless-stopped
+    volumes:
+      - ./backend/data:/app/data
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./data/rag_chat.db
+      - CHROMA_DIR=/app/data/chroma
+      - UPLOAD_DIR=/app/data/uploads
+      - DEBUG=false
+    networks:
+      - rag-chat-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    container_name: rag-chat-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - rag-chat-network
+
+networks:
+  rag-chat-network:
+    driver: bridge
+
+
